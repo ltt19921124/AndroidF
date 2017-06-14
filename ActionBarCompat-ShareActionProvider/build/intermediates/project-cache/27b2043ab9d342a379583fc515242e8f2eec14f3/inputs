@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=I:\github\AndroidF\ActionBarCompat-ShareActionProvider\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar
+FILE_HASH=cf61083bceecaed7320461897b6dbe15be07ea8a
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true
