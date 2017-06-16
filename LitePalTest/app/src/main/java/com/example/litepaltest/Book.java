@@ -1,13 +1,19 @@
 package com.example.litepaltest;
 
+import android.support.v7.app.AppCompatActivity;
+
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Tian Lu on 2017/6/15.
  */
 
-public class Book {
+public class Book extends DataSupport{
     private int id;
 
     private String author;
+
+    private String press;
 
     private double price;
 
@@ -53,5 +59,13 @@ public class Book {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPress() {
+        return press;
+    }
+
+    public void setPress(String press) {
+        this.press = press;
     }
 }
