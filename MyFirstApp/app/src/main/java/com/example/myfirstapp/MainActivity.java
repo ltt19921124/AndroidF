@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.news_articles);
     }
     public void sendMessage(View view) {
         Intent intent = new Intent(this,DisplayMessageActivity.class);
