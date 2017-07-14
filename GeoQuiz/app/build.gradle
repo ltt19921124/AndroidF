@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
     defaultConfig {
-        applicationId "com.example.myapplication"
+        applicationId "com.bignerdranch.android.geoquiz"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
