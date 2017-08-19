@@ -40,12 +40,22 @@ public class CrimeListFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateUI();
+    }
+
     private void updateUI() {
         CrimeLab crimeLab = CrimeLab.get(getActivity());
         List<Crime> crimes = crimeLab.getmCrimes();
 
-        mAdapter = new CrimeAdapter(crimes);
-        mCrimeRecyclerView.setAdapter(mAdapter);
+        if (mAdapter == null) {
+            mAdapter = new CrimeAdapter(crimes);
+            mCrimeRecyclerView.setAdapter(mAdapter);
+        } else {
+            mAdapter.notifyDataSetChanged();
+        }
     }
     private class CrimeHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
@@ -72,13 +82,15 @@ public class CrimeListFragment extends Fragment {
         public void onClick(View view) {
 //            Toast.makeText(getActivity(),
 //                    mCrime.getmTitle() + "clicked!",Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getActivity(),CrimeActivity.class);
+//            Intent intent = new Intent(getActivity(),CrimeActivity.class);
+//            Intent intent = CrimeActivity.newIntent(getActivity(),mCrime.getmId());
+            Intent intent = CrimePagerActivity.newIntent(getActivity(),mCrime.getmId());
             startActivity(intent);
+
         }
     }
     private class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder> {
         private List<Crime> mCrimes;
-
         public CrimeAdapter(List<Crime> crimes) {
             mCrimes = crimes;
 
@@ -92,6 +104,7 @@ public class CrimeListFragment extends Fragment {
 
         @Override
         public CrimeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
             LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
 
             return new CrimeHolder(layoutInflater,parent);
