@@ -10,7 +10,7 @@ public class Question {
 
     private int mTextResId;
     private boolean mAnswertrue;
-
+    
     public Question(int textResId, boolean answertrue) {
         mTextResId = textResId;
         mAnswertrue = answertrue;
