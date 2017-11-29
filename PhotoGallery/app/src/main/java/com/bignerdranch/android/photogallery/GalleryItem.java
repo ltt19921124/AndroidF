@@ -12,6 +12,7 @@ public class GalleryItem {
     @Override
     public String toString() {
         return mCaption;
+
     }
 
     public String getmCaption() {
