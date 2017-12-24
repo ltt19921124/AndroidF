@@ -22,14 +22,12 @@ public class FirstActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String data = "Hello Sec";
-//                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+//                String data = "Hello SecondActivity";
+                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
 //                intent.putExtra("extra_data",data);
-//                startActivityForResult(intent,1);
-//                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
-//                startActivityForResult(intent,1);
-                Intent intent = new Intent(FirstActivity.this,FirstActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,1);
+//                Intent intent = new Intent(FirstActivity.this,FirstActivity.class);
+//                startActivity(intent);
             }
         });
     }
@@ -44,6 +42,7 @@ public class FirstActivity extends AppCompatActivity {
                 }
                 break;
             default:
+
         }
     }
 

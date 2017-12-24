@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static final int UPDATE_TEXT = 1;
     private TextView textView;
     private Handler handler = new Handler() {
+        @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case UPDATE_TEXT:
