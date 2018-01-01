@@ -50,6 +50,7 @@ public class LoginActivity extends BaseActivity{
         passwordEdit = (EditText) findViewById(R.id);
 
 
+
     }
 }
 
